@@ -106,33 +106,28 @@ class iFoundVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDe
             MainService.si.addLoaderView(self.tabBarController!.view, message: "Please Wait..")
             MainService.si.uploadImage(itemImage.image!, resize: 800) { (completed, image) -> () in
                 
-            }
-            
-        }
-        
-        
-        MainService.si.uploadImage(itemImage.image!, resize: 800) { (completed, image) -> () in
-            
-            let post = Post(title: self.postTitle.text, type: "found", image: image, date:  self.date.text, city: self.city.text, contactNo: self.contactNumber.text, contactEmail: self.contactEmail.text, uid: MainService.si.currentUser.uid)
-            post.add({ (complete: Bool, postKey: String?) -> () in
-                if(complete) {
-                    post.addPostKey(postKey!)
+                let post = Post(title: self.postTitle.text, type: "found", image: image, date:  self.date.text, city: self.city.text, contactNo: self.contactNumber.text, contactEmail: self.contactEmail.text, uid: MainService.si.currentUser.uid)
+                post.add({ (complete: Bool, postKey: String?) -> () in
                     MainService.si.removeLoaderView(self.tabBarController!.view)
                     self.clearFields()
-                    self.selectImageButton.hidden = false
-                    MainService.si.posts.insert(post, atIndex: 0)
-                    MainService.si.userPosts.insert(post, atIndex: 0)
-                    NSNotificationCenter.defaultCenter().postNotificationName("addPost", object: nil)
-                    self.performSegueWithIdentifier("ShowDetail", sender: 0)
                     
-                }
-                else {
-                    MainService.si.removeLoaderView(self.view)
-                    MainService.si.showAlert()
-                }
-            })
-            
-            
+                    if(complete) {
+                        post.addPostKey(postKey!)
+                        self.selectImageButton.hidden = false
+                        MainService.si.posts.insert(post, atIndex: 0)
+                        MainService.si.userPosts.insert(post, atIndex: 0)
+                        NSNotificationCenter.defaultCenter().postNotificationName("addPost", object: nil)
+                        self.performSegueWithIdentifier("ShowDetail", sender: 0)
+                        
+                    }
+                    else {
+                        MainService.si.showAlert()
+                    }
+                })
+                
+                
+                
+            }
             
         }
         

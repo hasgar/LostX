@@ -23,6 +23,7 @@
 		6E42FDD41DA42A4B000BED74 /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E42FDD31DA42A4B000BED74 /* location.swift */; };
 		6E54322E1D9C179E00BF3873 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E54322D1D9C179E00BF3873 /* FeedVC.swift */; };
 		6E6120101D9FE1280034DAA7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E61200F1D9FE1280034DAA7 /* Post.swift */; };
+		6E6A6D2F1DCA4FD100C003B6 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E6A6D2E1DCA4FD100C003B6 /* keys.plist */; };
 		6E74B1571D943A6E0010FF6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74B1561D943A6E0010FF6C /* AppDelegate.swift */; };
 		6E74B1591D943A6E0010FF6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E74B1581D943A6E0010FF6C /* ViewController.swift */; };
 		6E74B15C1D943A6E0010FF6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E74B15A1D943A6E0010FF6C /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		6E42FDD31DA42A4B000BED74 /* location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
 		6E54322D1D9C179E00BF3873 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		6E61200F1D9FE1280034DAA7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6E6A6D2E1DCA4FD100C003B6 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		6E74B1531D943A6E0010FF6C /* LostX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E74B1561D943A6E0010FF6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E74B1581D943A6E0010FF6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +77,6 @@
 		6E74B1621D943A6E0010FF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E74B1681D943AEB0010FF6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E7A3A8B1DBD2A2100A7A9D0 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		6E80D6701DB0D60000D2C2FF /* LostX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LostX.entitlements; sourceTree = "<group>"; };
 		6E86E8291DA3692F00CB43C3 /* iLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iLostVC.swift; sourceTree = "<group>"; };
 		6E8DB8E21DBE9F9800E4EF89 /* SettingsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		6EBE55581DAC1DFD003399B9 /* Reaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
@@ -134,7 +135,6 @@
 		6E74B1551D943A6E0010FF6C /* LostX */ = {
 			isa = PBXGroup;
 			children = (
-				6E80D6701DB0D60000D2C2FF /* LostX.entitlements */,
 				6EFD91A71D97BE04009BAE25 /* Services */,
 				6EEDA34E1D9445040033CB13 /* Util */,
 				6EEDA34D1D9444FB0033CB13 /* Resources */,
@@ -144,6 +144,7 @@
 				6E74B1561D943A6E0010FF6C /* AppDelegate.swift */,
 				6E74B15D1D943A6E0010FF6C /* Assets.xcassets */,
 				6E74B1681D943AEB0010FF6C /* GoogleService-Info.plist */,
+				6E6A6D2E1DCA4FD100C003B6 /* keys.plist */,
 				6E74B1621D943A6E0010FF6C /* Info.plist */,
 			);
 			path = LostX;
@@ -272,7 +273,10 @@
 						DevelopmentTeam = 54964LFSRB;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
 							};
 						};
 					};
@@ -309,6 +313,7 @@
 				6E38076C1D9540E20058E60C /* Raleway-Light.ttf in Resources */,
 				6E74B15E1D943A6E0010FF6C /* Assets.xcassets in Resources */,
 				6E74B15C1D943A6E0010FF6C /* Main.storyboard in Resources */,
+				6E6A6D2F1DCA4FD100C003B6 /* keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -497,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -509,7 +514,8 @@
 			baseConfigurationReference = 007DAF0912E100B4BF82AC20 /* Pods-LostX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LostX/LostX.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LostX",
@@ -519,6 +525,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kerningless.LostX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -527,7 +536,8 @@
 			baseConfigurationReference = 8F641E4EEECFCE1E66B72A5B /* Pods-LostX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = LostX/LostX.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LostX",
@@ -537,6 +547,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kerningless.LostX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

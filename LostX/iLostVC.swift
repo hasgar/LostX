@@ -100,42 +100,40 @@ class iLostVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDel
         else if contactEmail.text?.characters.count < 1 {
              MainService.si.showAlert("Contact email empty", message: "Please enter your contact email", Button: "OK")
         }
-        else if itemImage.image == nil {
+        else if  itemImage.image == nil {
              MainService.si.showAlert("Post image not selected", message: "Please select an image", Button: "OK")
         }
         else {
             MainService.si.addLoaderView(self.tabBarController!.view, message: "Please Wait..")
             MainService.si.uploadImage(itemImage.image!, resize: 800) { (completed, image) -> () in
-         
-            }
-
-        }
-        
-        
-        MainService.si.uploadImage(itemImage.image!, resize: 800) { (completed, image) -> () in
-            
-            let post = Post(title: self.postTitle.text, type: "lost", image: image, date:  self.date.text, city: self.city.text, contactNo: self.contactNumber.text, contactEmail: self.contactEmail.text, uid: MainService.si.currentUser.uid)
-            post.add({ (complete: Bool, postKey: String?) -> () in
-                if(complete) {
-                    post.addPostKey(postKey!)
+                
+                let post = Post(title: self.postTitle.text, type: "lost", image: image, date:  self.date.text, city: self.city.text, contactNo: self.contactNumber.text, contactEmail: self.contactEmail.text, uid: MainService.si.currentUser.uid)
+                post.add({ (complete: Bool, postKey: String?) -> () in
                     MainService.si.removeLoaderView(self.tabBarController!.view)
                     self.clearFields()
-                    self.selectImageButton.hidden = false
-                    MainService.si.posts.insert(post, atIndex: 0)
-                    MainService.si.userPosts.insert(post, atIndex: 0)
-                    NSNotificationCenter.defaultCenter().postNotificationName("addPost", object: nil)
-                    self.performSegueWithIdentifier("ShowDetail", sender: 0)
-
-                }
-                else {
-                    MainService.si.removeLoaderView(self.view)
-                    MainService.si.showAlert()
-                }
-            })
-
-          
-
+                    
+                    if(complete) {
+                        post.addPostKey(postKey!)
+                        self.selectImageButton.hidden = false
+                        MainService.si.posts.insert(post, atIndex: 0)
+                        MainService.si.userPosts.insert(post, atIndex: 0)
+                        NSNotificationCenter.defaultCenter().postNotificationName("addPost", object: nil)
+                        self.performSegueWithIdentifier("ShowDetail", sender: 0)
+                        
+                    }
+                    else {
+                        MainService.si.showAlert()
+                    }
+                })
+                
+                
+                
+            }
+            
         }
+        
+        
+       
         
         
         

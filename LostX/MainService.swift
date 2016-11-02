@@ -39,6 +39,21 @@ class MainService {
     
     // MARK: Methods
     
+    // Get keys from plist
+    
+    func getApiKey(key :String) -> String {
+        
+        let filePath = NSBundle.mainBundle().pathForResource("keys", ofType: "plist")
+        let plist = NSDictionary(contentsOfFile:filePath!)
+        if let value = plist?.objectForKey(key) as? String {
+            return value
+        }
+        else {
+            MainService.si.showAlert("Api Key Error!", message: "To Developer: Fix Api Keys", Button: "OK")
+            return ""
+        }
+    }
+    
     // Hex code to UIColor
     
     func hexStringToUIColor (hex:String) -> UIColor {

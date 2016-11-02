@@ -18,6 +18,7 @@ import FirebaseDatabase
     typealias imageUploadCompleted = (Bool, String?) -> ()
     typealias postCreated = (Bool, String?) -> ()
 
+
     // MAKE: Segue
 
     struct SEGUE {
@@ -51,14 +52,14 @@ import FirebaseDatabase
     // MAKE: Google Maps
 
     struct GOOGLEPLACE {
-        static let key = "AIzaSyBpREcMhFN5DlugJIyIrVrzmpG7rUg4Ons"
+        static let key = MainService.si.getApiKey("googleplace")
         static let baseUrl = "https://maps.googleapis.com/maps/api/place/autocomplete/json"
     }
 
     // MAKE: Imageshack API
 
     struct IMAGESHACK {
-        static let key = "0FGJNQTUa9685b32751c2043e17f2c81ed4e461d".dataUsingEncoding(NSUTF8StringEncoding)
+        static let key = MainService.si.getApiKey("imageshack").dataUsingEncoding(NSUTF8StringEncoding)
         static let format = "json".dataUsingEncoding(NSUTF8StringEncoding)
         static let uploadUrl = "https://post.imageshack.us/upload_api.php"
     }

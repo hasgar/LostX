@@ -61,6 +61,19 @@ class SettingsTVC: UITableViewController, UITextFieldDelegate, UIImagePickerCont
     override func tableView(tableView: UITableView,
                             didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        if indexPath.section == 0 {
+            // Change Password
+            
+            editField("name")
+            
+            endEditing("email")
+            endEditing("password")
+            
+            newName.becomeFirstResponder()
+            
+            
+        }
+        
         if indexPath.section == 1 {
             // Change Password
             
@@ -166,6 +179,15 @@ class SettingsTVC: UITableViewController, UITextFieldDelegate, UIImagePickerCont
         
     }
     
+   
+    @IBAction func userNamePressed(sender: AnyObject) {
+        editField("name")
+        
+        endEditing("email")
+        endEditing("password")
+        
+        newName.becomeFirstResponder()
+    }
     
     @IBAction func logoutButtonPressed(sender: AnyObject) {
         let confirmAlert = UIAlertController(title: "Are you sure?", message: "Do you really want to log out?", preferredStyle: UIAlertControllerStyle.Alert)
@@ -515,6 +537,8 @@ class SettingsTVC: UITableViewController, UITextFieldDelegate, UIImagePickerCont
         dismissViewControllerAnimated(true, completion: nil)
         
     }
+    
+    
     
     
 }
