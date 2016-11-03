@@ -160,7 +160,7 @@ class Reaction {
         
     }
     
-    
+    // Mark reaction is true or not
     
     func mark(postId: Int, mark: Bool, complete: completed) {
         FIREBASE.posts.child("\(postKey!)/reactions/\(reactionKey!)/status").setValue(mark) { (error, ref) -> Void in

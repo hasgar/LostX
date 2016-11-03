@@ -101,7 +101,7 @@ class FeedCell: UITableViewCell {
             
         }
         else {
-            userImagePlaceholder.text = String(MainService.si.currentUser.name!.characters.first!).uppercaseString
+            userImagePlaceholder.text = String(post.name!.characters.first!).uppercaseString
            userImagePlaceholder.hidden = false
         }
         

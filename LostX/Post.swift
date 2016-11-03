@@ -184,7 +184,6 @@ class Post {
                     
                     // Grab user name of every post
                     
-                    
                     FIREBASE.users.child(reactionData!["uid"] as! String).observeSingleEventOfType(FIREBASE.dataEventTypeValue, withBlock: { (snapshot) in
                         if let snap = snapshot.value as? Dictionary<String, AnyObject> where snap["name"] != nil {
                             reactionData?.updateValue(snap["name"]!.lowercaseString, forKey: "userName")
