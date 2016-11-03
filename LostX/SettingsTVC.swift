@@ -246,7 +246,8 @@ class SettingsTVC: UITableViewController, UITextFieldDelegate, UIImagePickerCont
             
             
         }
-            
+        
+        
             
         if textField.tag == 2 {
             
