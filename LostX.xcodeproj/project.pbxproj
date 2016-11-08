@@ -30,7 +30,6 @@
 		6E74B15E1D943A6E0010FF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E74B15D1D943A6E0010FF6C /* Assets.xcassets */; };
 		6E74B1611D943A6E0010FF6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E74B15F1D943A6E0010FF6C /* LaunchScreen.storyboard */; };
 		6E74B1691D943AEB0010FF6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E74B1681D943AEB0010FF6C /* GoogleService-Info.plist */; };
-		6E7A3A8C1DBD2A2100A7A9D0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A3A8B1DBD2A2100A7A9D0 /* Settings.swift */; };
 		6E86E82A1DA3692F00CB43C3 /* iLostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86E8291DA3692F00CB43C3 /* iLostVC.swift */; };
 		6E8DB8E31DBE9F9800E4EF89 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8DB8E21DBE9F9800E4EF89 /* SettingsTVC.swift */; };
 		6EBE55591DAC1DFD003399B9 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBE55581DAC1DFD003399B9 /* Reaction.swift */; };
@@ -76,7 +75,6 @@
 		6E74B1601D943A6E0010FF6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E74B1621D943A6E0010FF6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E74B1681D943AEB0010FF6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6E7A3A8B1DBD2A2100A7A9D0 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6E86E8291DA3692F00CB43C3 /* iLostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iLostVC.swift; sourceTree = "<group>"; };
 		6E8DB8E21DBE9F9800E4EF89 /* SettingsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		6EBE55581DAC1DFD003399B9 /* Reaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				6EE7DC541D98408B00AA8140 /* User.swift */,
 				6E61200F1D9FE1280034DAA7 /* Post.swift */,
 				6EBE55581DAC1DFD003399B9 /* Reaction.swift */,
-				6E7A3A8B1DBD2A2100A7A9D0 /* Settings.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -390,7 +387,6 @@
 				6EF02D0C1DA6EF310092E5A6 /* iFoundVC.swift in Sources */,
 				6E6120101D9FE1280034DAA7 /* Post.swift in Sources */,
 				6ED2B2931DB949DF00C6876D /* ReactionCell.swift in Sources */,
-				6E7A3A8C1DBD2A2100A7A9D0 /* Settings.swift in Sources */,
 				6EC8B96D1DAFCABC002E5DF0 /* YourXCell.swift in Sources */,
 				6EBE55591DAC1DFD003399B9 /* Reaction.swift in Sources */,
 				6E0F22921D9AC3D000FA6282 /* Extensions.swift in Sources */,
