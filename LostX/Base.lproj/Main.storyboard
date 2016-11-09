@@ -3546,11 +3546,11 @@
                         <viewControllerLayoutGuide type="bottom" id="adL-Px-YRk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nME-Qc-8mn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pE-dK-jSc">
-                                <rect key="frame" x="40" y="491" width="520" height="40"/>
+                                <rect key="frame" x="40" y="540" width="520" height="40"/>
                                 <color key="backgroundColor" red="0.67843137254901964" green="0.86274509803921573" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="c1X-Zz-eF2"/>
@@ -3570,7 +3570,7 @@
                                 </connections>
                             </button>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyZ-Sv-OKT">
-                                <rect key="frame" x="202" y="453" width="196" height="30"/>
+                                <rect key="frame" x="202" y="502" width="196" height="30"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="196" id="UNO-hu-ATF"/>
@@ -3772,11 +3772,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ZNJ-1p-VzL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yIf-3e-ZVT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tko-MV-zZF">
-                                <rect key="frame" x="40" y="491" width="520" height="40"/>
+                                <rect key="frame" x="40" y="540" width="520" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.92549019607843142" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0lC-aW-Vr0"/>
@@ -3798,7 +3798,7 @@
                                 </connections>
                             </button>
                             <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't you have an account?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wp-kK-Jci">
-                                <rect key="frame" x="202" y="453" width="196" height="30"/>
+                                <rect key="frame" x="202" y="502" width="196" height="30"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3RD-CQ-t8K"/>
@@ -4015,7 +4015,7 @@
         <image name="userAvatar" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CNa-Gb-fLE"/>
+        <segue reference="nCR-ld-615"/>
         <segue reference="hK7-H1-Kbt"/>
         <segue reference="ycI-tj-7PW"/>
         <segue reference="g6P-uH-eWj"/>
